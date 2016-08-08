@@ -8,6 +8,7 @@ import numpy as np
 class SBM(object):
 
     def __init__(self, num_vertices, communities, vertex_labels, p_matrix):
+        logging.info('Initializing SBM Model ...')
         self.num_vertices = num_vertices
         self.communities = communities
         self.vertex_labels = vertex_labels
@@ -15,9 +16,11 @@ class SBM(object):
         self.block_matrix = self.generate(self.num_vertices, self.communities, self.vertex_labels, self.p_matrix)
 
     def detect(self):
+        logging.info('SBM detection ...')
         pass
 
     def generate(self, num_vertices, num_communities, vertex_labels, p_matrix):
+        logging.info('Generating SBM (directed graph) ...')
         v_label_shape = (1, num_communities)
         p_matrix_shape = (num_communities, num_communities)
         block_matrix_shape = (num_vertices, num_vertices)
@@ -31,14 +34,11 @@ class SBM(object):
                 p = random.random()
                 val = p_matrix[community_a][community_b]
 
-                print (row, col)
-                print p
-                print val
-
                 if p <= val:
                     block_matrix[row][col] = 1
 
         return block_matrix
 
     def recover(self):
+        logging.info('SBM recovery ...')
         pass

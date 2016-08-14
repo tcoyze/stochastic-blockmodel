@@ -47,6 +47,7 @@ array([[1, 1, 0, 0, 0],
 
 ## Papers
 Here are a list of papers that I have found resourceful (some overlapping topics):
+* http://tuvalu.santafe.edu/~aaronc/courses/5352/fall2013/csci5352_2013_L16.pdf
 * https://arxiv.org/abs/1503.00609v2
 * http://arxiv.org/abs/1512.09080v3
 * https://arxiv.org/abs/1405.3267v4

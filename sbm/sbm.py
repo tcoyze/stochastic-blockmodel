@@ -21,7 +21,7 @@ class SBM(object):
 
     def generate(self, num_vertices, num_communities, vertex_labels, p_matrix):
         logging.info('Generating SBM (directed graph) ...')
-        v_label_shape = (1, num_communities)
+        v_label_shape = (1, num_vertices)
         p_matrix_shape = (num_communities, num_communities)
         block_matrix_shape = (num_vertices, num_vertices)
         block_matrix = np.zeros(block_matrix_shape, dtype=int)
